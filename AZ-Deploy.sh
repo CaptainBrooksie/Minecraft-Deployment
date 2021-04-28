@@ -1,13 +1,8 @@
 #!/bin/bash
 
-let randomNum=$RANDOM*$RANDOM
 
-# Generate a unique service and group name with the suffix
-ServiceName=Minecraft$randomNum
-#resource name must be lowercase
-mySignalRSvcName=${ServiceName,,}
-myResourceGroupName=Minecraft"RG$randomNum"
-myVM=Minecraft"VM$randomNum"
+myResourceGroupName=MinecraftRG$RANDOM
+myVM=MinecraftVM$RANDOM
 
 az group create --name $myResourceGroupName --location westeurope
 
