@@ -7,7 +7,7 @@ let randomNum=$RANDOM*$RANDOM
 SignalRName=Minecraft$randomNum
 #resource name must be lowercase
 mySignalRSvcName=${SignalRName,,}
-myResourceGroupName=$SignalRName"Group"
+myResourceGroupName=SignalRName"Group"
 myVM=$SignalRName"VM"
 
 az group create --name $myResourceGroupName --location westeurope
