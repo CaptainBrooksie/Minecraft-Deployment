@@ -1,5 +1,7 @@
 #!/bin/bash
 
-az group create --name MinecraftRG --location westeurope
+myResourceGroupName=MinecraftRG$RANDOM
 
-az vm create --resource-group MinecraftRG --name MinecraftVM --size Standard_B1s --image win2016datacenter --location westeurope --admin-username azureuser
+az group create --name myResourceGroupName --location westeurope
+
+az vm create --resource-group myResourceGroupName --name MinecraftVM$RANDOM --size Standard_B1s --image win2016datacenter --location westeurope --admin-username azureuser
