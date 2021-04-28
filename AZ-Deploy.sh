@@ -15,18 +15,9 @@
 az group create --name MinecraftRG --location westeurope
 
 # Create a general-purpose storage account in your resource group.
-az storage account create \
-    --resource-group MinecraftRG \
-    --name MinecraftSA \
-    --location westeurope \
-    --sku Standard_LRS
+
+az storage account create --name MinecraftSA --resource-group MinecraftRF --location westeurope --sku Standard_LRS
 
 # Create Windowd Virtual Machine
 
-az vm create \
-    --resource-group MinecraftRG \
-    --name MinecraftVM \
-    --image win2019datacenter \
-    --admin-username azureuser \
-    --location westeurope \
-    --size B1s
+az vm create --resource-group MinecraftRG --name MinecraftVM --image win2019datacenter --admin-username azureuser --location westeurope --size B1s
