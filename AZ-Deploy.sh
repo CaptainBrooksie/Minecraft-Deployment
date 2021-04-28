@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Generate a unique suffix for the service name
-let randomNum=$RANDOM*$RANDOM
+let randomNum=$RANDOM
 
 # Generate a unique service and group name with the suffix
-ServiceName=MinecraftSvc$randomNum
+ServiceName=Minecraft$randomNum
 
 #resources name must be lowercase
 myResourceGroupName=$ServiceName"Group"
