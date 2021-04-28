@@ -12,7 +12,7 @@
 #myVMName=$ServiceName"VM"
 
 # Create a resource group.
-az group create --name Minecraft-RG --location westeurope
+az group create --name MinecraftRG --location westeurope
 
 # Create a general-purpose storage account in your resource group.
 az storage account create \
